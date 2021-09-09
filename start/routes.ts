@@ -29,4 +29,4 @@ Route.post("/authenticate", "AuthController.authenticate")
 Route.group(() => {
   Route.resource("cursos", 'CursosController').apiOnly()
   Route.resource("alunos", 'AlunosController').apiOnly()
-})
+}).middleware('auth')
